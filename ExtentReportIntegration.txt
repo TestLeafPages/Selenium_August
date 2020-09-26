@@ -1,0 +1,31 @@
+Extent Report Integration:
+====================
+
+Step1: Create a method startReport() and have the report level set up code inside method
+
+Step2: Declare the variables for ExtentHtmlReporter and ExtentReports as global with public static
+
+Step3: apply @BeforeSuite for the startReport() method
+
+Step4: Create endReport() method to call extent.flush() and apply @AfterSuite
+
+Step5: Create testCaseDetails() method and include the test creation, author and category setup codes.Apply the @BeforeClass annotation
+
+Step6: Declare the ExtentTest globally with public static
+
+Step7: Create global variavles for test case name, description, author and category
+
+Step8: Replace the hardcoded values with the variable names in testCaseDetails() method
+
+Step9: Assign the values for the test case name, description, author and category in each test cases at the @BeforeTest method (setDetails)
+
+Step10: Create reportStep() with 2 args (msg and status). Call pass() / fail() based on the status
+
+
+Step11: Surround each step code with try / catch block. Call reportStep with status as pass from try block and call reportStep with status as fail from the catch block
+
+
+Step12: Create node for the test at the @BeforeMethod and declare the node globally
+
+Step13: Make step level pass / fail to the node
+ 
